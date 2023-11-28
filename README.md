@@ -1,4 +1,4 @@
-# dpIEL-Metagenome codes and data
+# dpIEL-Acetate Project codes and data
 Pedicord-Lab, Deprtment of Medicine, University of Cambrodge
 
 ## Usage
