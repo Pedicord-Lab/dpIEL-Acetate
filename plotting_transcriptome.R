@@ -35,16 +35,16 @@ dev.off()
 
 pca_plot
 
-fviz_pca_ind(res.pca, label="none", habillage=propionate_ordi$HBI_3Low,
+fviz_pca_ind(res.pca, label="none", habillage=sample_info$HBI_3Low,
              addEllipses=TRUE, ellipse.level=0.9999, ellipse.type = "confidence",
              geom = "text", legend.title = "Disease score") +
   #labs(title ="PCA Core acetate pathway", x = "PC1 (63.6%)", y = "PC2 (22.6%)") +
   theme_bw() +
-  geom_point(aes(color=propionate_ordi$HBI_3Low), size=2)
+  geom_point(aes(color=sample_info$HBI_3Low), size=2)
 
 #### t-test on the axes
 scores <- data.frame(res.pca$x)
-scores$HBI_3Low <- metadata_HBI$HBI_3Low
+scores$HBI_3Low <- sample_info$HBI_3Low
 ##### Two-tail t-test
 t.test(PC1 ~ HBI_3Low, data = scores)
 ##### One-tail t-test (alternative hypothesis)
